@@ -13,5 +13,13 @@ app.get('/', function (req, res) {
    res.render('index');
 });
 
+// Ghost?!
+var ghost = require('ghost');
+ghost().then(function(ghostServer) {
+   app.use(ghostServer.config.paths.subdir, ghostServer.rootApp);
+   ghostServer.start(app);
+});
+
+
 app.listen(3000);
 console.log('Meow!');

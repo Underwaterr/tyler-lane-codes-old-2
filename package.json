@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "express": "^4.10.4",
-    "jade": "*"
+    "jade": "*",
+    "ghost": "0.5.2"
   }
 }
